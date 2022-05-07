@@ -17,6 +17,6 @@ git pull
 yarn install
 #printf "REACT_APP_BASE_URL = https://$servidor\nREACT_APP_BASE_URL_WS = wss://$servidor\nREACT_APP_TOKEN = $token\nREACT_APP_ROUTE = $servidor" >> .env
 yarn build
-rm -rf ../pos_online
-mv ./build ../pos_online
+rm -rf ../bingot
+mv ./build ../bingot
 exit 0
