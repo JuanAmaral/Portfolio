@@ -1,0 +1,9 @@
+{
+  "name": "Portfolio-JuanAmaral",
+  "short_name": "Port-JuanAmaral",
+  "theme_color": "#7276b8",
+  "background_color": "#0d0b2d",
+  "display": "fullscreen",
+  "scope": "/",
+  "start_url": "/"
+}
