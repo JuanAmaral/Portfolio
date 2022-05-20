@@ -1,5 +1,29 @@
 import styled from 'styled-components';
 import { Menu} from '@styled-icons/boxicons-regular/Menu';
+import {ConnectWithoutContact} from '@styled-icons/material-twotone/ConnectWithoutContact';
+import {TargetArrow} from '@styled-icons/fluentui-system-regular/TargetArrow';
+import {CodeBlock} from '@styled-icons/boxicons-regular/CodeBlock';
+import {ApprovalApp} from '@styled-icons/fluentui-system-filled/ApprovalApp';
+export const IconConnectWithoutContact = styled(ConnectWithoutContact)`
+    width:5rem;
+    height: 5rem;
+    color: white;
+`;
+export const IconTargetArrow = styled(TargetArrow)`
+    width:5rem;
+    height: 5rem;
+    color: white;
+`;
+export const IconCodeBlock = styled(CodeBlock)`
+    width:5rem;
+    height: 5rem;
+    color: white;
+`;
+export const IconApprovalApp = styled(ApprovalApp)`
+    width:5rem;
+    height: 5rem;
+    color: white;
+`;
 
 export const Container = styled.div`
     background: #1f1a27;
@@ -39,6 +63,8 @@ export const ContentBanner = styled.div`
 export const ContentTittle = styled.div`
     display:flex;
     flex-direction: row;
+    width: 100%;
+    padding:1rem;
 `;
 export const NameTittle = styled.h2`
     font-size: 1.2rem;
@@ -46,7 +72,7 @@ export const NameTittle = styled.h2`
     margin-left: 0.5rem;
 `;
 export const SubTittle = styled.h2`
-    font-size: 0.8rem;
+    font-size: 1rem;
     color:white;
 `;
 export const YellowTextBox = styled.div `
@@ -75,15 +101,17 @@ export const ContainerBox = styled.section`
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
     object-fit: cover;
     grid-gap: 1rem;
+    
 `;
 export const BoxInfo = styled.div`
-    //margin-top: 1rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
     background: #261e33;
     border-radius: 10px;
     height: 15rem;
     width: 15rem;
     border-radius: 5%;
-    //margin: 1rem;
     
 `;
 export const ContainerImages = styled.section`

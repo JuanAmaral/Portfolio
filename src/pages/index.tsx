@@ -7,17 +7,18 @@ import Quina from '../assets/quina.png'
 import Tryedu from '../assets/Tryedu.png'
 import JogosSorte from '../assets/JogosSorte.png'
 import Image from 'next/image'
+import NavBar from '../Components/NavBar'
 // import { Bola } from '../../Components/Bola';
 
 export default function Home() {
   return (
     <style.Container>
+      <NavBar />
       <style.NavBar>
         <style.ContentTittle>
           <style.Tittle color="white">Port</style.Tittle>
           <style.Tittle color="#711aff">folio.</style.Tittle>
         </style.ContentTittle>
-        <style.IconMenu />
       </style.NavBar>
       <style.ContentBanner>
         <style.ContainerText>
@@ -41,25 +42,29 @@ export default function Home() {
         </style.ContainerImage>
         <style.ContainerText>
           <style.YellowTextBox />
-          <style.NameTittle>Benefícios</style.NameTittle>
+          <style.NameTittle>Como funciona?</style.NameTittle>
         </style.ContainerText>
         <style.ContainerBox>
           <style.BoxInfo>
-            <style.Tittle color="white">Beneficio 1</style.Tittle>
+            <style.IconConnectWithoutContact />
+            <style.SubTittle>Temos bate papo</style.SubTittle>
           </style.BoxInfo>
           <style.BoxInfo>
-            <style.Tittle color="white">Beneficio 2</style.Tittle>
+            <style.IconTargetArrow />
+            <style.SubTittle>Definimos nossas metas </style.SubTittle>
           </style.BoxInfo>
           <style.BoxInfo>
-            <style.Tittle color="white">Beneficio 3</style.Tittle>
+            <style.IconCodeBlock />
+            <style.SubTittle>Realizo o trabalho</style.SubTittle>
           </style.BoxInfo>
           <style.BoxInfo>
-            <style.Tittle color="white">Beneficio 4</style.Tittle>
+            <style.IconApprovalApp />
+            <style.SubTittle>Aprovação e finalização</style.SubTittle>
           </style.BoxInfo>
         </style.ContainerBox>
         <style.ContainerText>
           <style.YellowTextBox />
-          <style.NameTittle>Projetos</style.NameTittle>
+          <style.NameTittle>Projetos já realizados</style.NameTittle>
         </style.ContainerText>
         <style.ContainerImages>
           <Image

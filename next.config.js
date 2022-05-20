@@ -10,8 +10,8 @@ const nextConfig = {
   images: isProd
     ? {
         loader: 'imgix',
-        path: 'https://bingot.bola90.app',
-        domains: ['bingot.bola90.app'],
+        path: 'https://www.juanamaral.com.br',
+        domains: ['www.juanamaral.com.br'],
         deviceSizes: [
           280, 300, 360, 375, 390, 393, 412, 414, 540, 640, 750, 768, 820, 828,
           912, 1080, 1200, 1280, 1920, 2048, 3840,
