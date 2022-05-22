@@ -32,5 +32,7 @@ const nextConfig = {
     version: require('./package.json')?.version || 'b.0.0',
   },
 }
-
+module.exports = {
+  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js']
+}
 module.exports = nextConfig
