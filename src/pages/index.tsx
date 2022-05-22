@@ -7,7 +7,6 @@ import Quina from '../assets/quina.png'
 import Tryedu from '../assets/Tryedu.png'
 import JogosSorte from '../assets/JogosSorte.png'
 import Image from 'next/image'
-import NavBar from '../Components/NavBar'
 import router from 'next/router'
 // import { Bola } from '../../Components/Bola';
 import { scroller } from 'react-scroll'
