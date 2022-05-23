@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 import { Menu} from '@styled-icons/boxicons-regular/Menu';
-import {ConnectWithoutContact} from '@styled-icons/material-twotone/ConnectWithoutContact';
-import {TargetArrow} from '@styled-icons/fluentui-system-regular/TargetArrow';
-import {CodeBlock} from '@styled-icons/boxicons-regular/CodeBlock';
-import {ApprovalApp} from '@styled-icons/fluentui-system-filled/ApprovalApp';
+//Icons
+
 import {Home} from '@styled-icons/heroicons-solid/Home'
 import {Users} from '@styled-icons/heroicons-solid/Users'
 import{Folders} from '@styled-icons/remix-fill/Folders'
@@ -53,17 +51,7 @@ export const ContentTittle = styled.div`
     padding:1rem;
     height: 5rem;
 `;
-export const NameTittle = styled.h2`
-    font-size: 1.9rem;
-    color:white;
-    margin-left: 0.5rem;
-`;
-export const SubTittle = styled.h2`
-    font-size: 1.5rem;
-    color:white;
-    margin:0;
-    margin-bottom: 3rem;
-`;
+
 export const YellowTextBox = styled.div `
     background: #f8d238;
     height: 2rem;
@@ -78,11 +66,6 @@ export const ContainerText = styled.div`
     margin-top:3rem;
     margin-bottom: 1rem;
 `;
-export const TittleName = styled(Tittle)`
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 0;
-`;
 
 export const ContainerImage = styled.div`
     margin-top: 2rem;
@@ -93,37 +76,8 @@ export const ContainerImage = styled.div`
     }
   
 `;
-export const ContainerBox = styled.section`
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-    object-fit: cover;
-    grid-gap: 1rem;
-    
-`;
-export const BoxInfo = styled.div`
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: #261e33;
-    border-radius: 10px;
-    height: 15rem;
-    width: 100%;
-    border-radius: 5%;  
-`;
-export const TextBox = styled.p`
-    color: white;
-    font-size: 1.5rem;
-`;
-export const ContainerImages = styled.section`
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-    object-fit: cover;
-    img {
-    border-radius: 5%;
-    }
-`;
+
+
 export const FloatingBar = styled.div`
     display: flex;
     flex-direction: column;
@@ -141,27 +95,10 @@ export const FloatingBar = styled.div`
     margin-top: 10rem;
     left: 83%;
     //border:  solid rgba(255, 255, 255,.09) 2px;
-    
-    
 `;
 
-//Icons
-export const IconConnectWithoutContact = styled(ConnectWithoutContact)`
-    width: 5rem;
-    color: white;
-`;
-export const IconTargetArrow = styled(TargetArrow)`
-    width:5rem;
-    color: white;
-`;
-export const IconCodeBlock = styled(CodeBlock)`
-    width:5rem;
-    color: white;
-`;
-export const IconApprovalApp = styled(ApprovalApp)`
-    width:5rem;
-    color: white;
-`;
+
+
 export const IconHome = styled(Home)<{active:boolean}>`
     width:1.4rem;
     color: white;
@@ -185,4 +122,23 @@ export const IconFolders = styled(Folders)<{active:boolean}>`
     padding: 0.15rem;
     border-radius: 50%;
     opacity : ${props => props.active?  1 :  0.3};
+`;
+
+
+//Texts
+export const TittleName = styled(Tittle)`
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0;
+`;
+export const NameTittle = styled.h2`
+    font-size: 1.9rem;
+    color:white;
+    margin-left: 0.5rem;
+`;
+export const SubTittle = styled.h2`
+    font-size: 1.5rem;
+    color:white;
+    margin:0;
+    margin-bottom: 3rem;
 `;
