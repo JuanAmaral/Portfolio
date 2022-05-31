@@ -1,5 +1,6 @@
 {
   "name": "boiler",
+  "homepage": "https://juanamaral.com.br",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,6 +14,7 @@
     "axios": "^0.26.1",
     "dayjs": "^1.11.0",
     "next": "12.1.0",
+    "next-images": "^1.8.4",
     "polished": "^4.1.4",
     "react": "17.0.2",
     "react-custom-roulette": "^1.2.0",

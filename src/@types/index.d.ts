@@ -4,3 +4,5 @@ declare module '*.json' {
 }
 
 declare type PropsOf<T extends (props: any) => any> = T extends (props: infer P) => any ? P : never;
+
+
