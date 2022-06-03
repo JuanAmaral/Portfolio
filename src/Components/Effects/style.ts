@@ -10,13 +10,14 @@ export const ContainerGeral = styled.div`
     border-radius: 10px;
 `;
 
-export const  ContainerImages = styled.div`
+export const  ContainerImages = styled.div<{press:boolean}>`
     width: 100%;
     transform: translate3d(0, 0, 100px);
     /* :hover {
         color: yellow;
     } */
     
+    /* ${props => props.press ? 'background: red;' : 'background: blue;'} */
     :hover {
         margin-left: -8px;
         transform: scale(0.9);

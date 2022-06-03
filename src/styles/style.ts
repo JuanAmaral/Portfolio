@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 import { Menu} from '@styled-icons/boxicons-regular/Menu';
 //Icons
-
 import {Home} from '@styled-icons/heroicons-solid/Home'
 import {Users} from '@styled-icons/heroicons-solid/Users'
 import{Folders} from '@styled-icons/remix-fill/Folders'
-
+import Image from 'next/image'
 //divs
 export const Container = styled.div`
     background: #1f1a27;
@@ -14,14 +13,24 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     z-index: -1;
+    @media (min-width: 500px) {
+        height: 650vh;
+    }
+    @media (min-width: 800px) {
+        height: 350vh;
+    }
+    @media (min-width: 1024px) {
+        height: 250vh;
+    }
+    
     
 `;
 export const NavBar = styled.div`
-    width:  90%;
+    width:  85%;
     height: 5rem;
     display:flex;
     background: transparent;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     
     
@@ -29,6 +38,7 @@ export const NavBar = styled.div`
 export const Tittle = styled.h1<{color: string}>`
     font-size:  3rem;
     color : ${props => props.color};
+    
 `;
 export const IconMenu = styled(Menu)`
     height: 2rem;
@@ -47,7 +57,7 @@ export const ContentBanner = styled.div`
 export const ContentTittle = styled.div`
     display:flex;
     flex-direction: row;
-    width: 100%;
+    width: 22%;
     padding:1rem;
     height: 5rem;
 `;
@@ -65,6 +75,10 @@ export const ContainerText = styled.div`
     align-items: center;
     margin-top:3rem;
     margin-bottom: 1rem;
+    
+    @media (min-width: 800px) {
+        margin-top: 7rem;
+    }
 `;
 
 export const ContainerImage = styled.div`
@@ -76,9 +90,12 @@ export const ContainerImage = styled.div`
     }
   
 `;
+export const ImageNext = styled(Image)`
+  border-radius: 50%;
+`;
 
 
-export const FloatingBar = styled.div`
+export const FloatingBarMobile = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,8 +112,51 @@ export const FloatingBar = styled.div`
     margin-top: 10rem;
     left: 83%;
     //border:  solid rgba(255, 255, 255,.09) 2px;
+    @media (min-width: 800px) {
+        display:none;
+    }
+`;
+export const MenuTopLandscape = styled.div`
+    display:flex;
+    justify-content: flex-start;
+    align-items: end;
+    width: 40%;
+    height: 5rem;
+    padding: 1rem;
+    display:none;
+    @media (min-width: 800px) {
+        display: flex;
+        color: white;
+    }
+`;
+export const TextMenuTop = styled.button`
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    background: transparent;
+    border: 1px solid transparent;
+    margin: 0;
+    color: #666088;
+    font-weight: 800;
+    margin-left:1rem;
+    cursor:pointer;
+    :hover{
+        color:white;
+        transition: 1s;
+        border-bottom: 1px solid #5f1af0;
+    }
 `;
 
+export const TextCurriculum = styled(TextMenuTop)`
+    color: white;
+    border-bottom: 1px solid #5f1af0;
+    font-size: 1.15rem;
+    :hover{
+        color: #5f1af0;
+        transition: 1s;
+        border-bottom: 1px solid white;
+    }
+`;
 
 
 export const IconHome = styled(Home)<{active:boolean}>`
@@ -130,6 +190,20 @@ export const TittleName = styled(Tittle)`
     font-size: 2.5rem;
     text-align: center;
     margin: 0;
+    @media (min-width: 800px) {
+        display:none;
+    }
+    
+`;
+export const TittleNameLandscape = styled(TittleName)`
+font-size: 3.5rem;
+@media (max-width: 800px) {
+        display:none;
+    }
+ @media (min-width: 800px) {
+        display:flex;
+}
+    
 `;
 export const NameTittle = styled.h2`
     font-size: 1.9rem;
@@ -138,7 +212,30 @@ export const NameTittle = styled.h2`
 `;
 export const SubTittle = styled.h2`
     font-size: 1.5rem;
-    color:white;
+    color: #666088;
     margin:0;
     margin-bottom: 3rem;
+    margin-top: 1rem;
+
+`;
+
+export const ContainerTopBox = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+@media (min-width: 800px) {
+    flex-direction: row;
+}
+`;
+export const StyledButton = styled.button`
+  padding: 0.7rem 1rem;
+  min-width: 4rem;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  background: #5f1af0;
+  font-size: 1.3rem;
+  color:white;
+  cursor: pointer;
+  
 `;

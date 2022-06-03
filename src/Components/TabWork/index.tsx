@@ -18,7 +18,7 @@ export default function TabWork() {
       </style.BoxInfo>
       <style.BoxInfo>
         <style.IconApprovalApp />
-        <style.TextBox>Aprovação e finalização</style.TextBox>
+        <style.TextBox>Revisão e aprovação</style.TextBox>
       </style.BoxInfo>
     </style.ContainerBox>
   )

@@ -1,16 +1,24 @@
 import React, { Component, useState } from 'react'
 import * as style from './style'
-import ellen1 from '../../assets/EllenEffect/ellen1.png'
-import ellen2 from '../../assets/EllenEffect/ellen2.png'
-import ellen3 from '../../assets/EllenEffect/ellen3.png'
-import ellen4 from '../../assets/EllenEffect/ellen4.png'
+import ellen1 from '../../../public/assets/img/EllenEffect/ellen1.png'
+import ellen2 from '../../../public/assets/img/EllenEffect/ellen2.png'
+import ellen3 from '../../../public/assets/img/EllenEffect/ellen3.png'
+import ellen4 from '../../../public/assets/img/EllenEffect/ellen4.png'
 import Image from 'next/image'
+
+// type ComponentsImage = {
+//   img1: string | HTMLImageElement | StaticImageData
+//   img2: string | HTMLImageElement | StaticImageData
+//   img3: string | HTMLImageElement | StaticImageData
+//   img4: string | HTMLImageElement | StaticImageData
+// }
 
 export default function Effects() {
   const [animation, setAnimation] = useState(false)
+  const [click, setclick] = useState(false)
   return (
     <style.ContainerGeral>
-      <style.ContainerImages>
+      <style.ContainerImages onClick={() => setclick(!click)} press={click}>
         <div className="uma">
           <style.Image1 src={ellen4} layout={'responsive'} />
         </div>

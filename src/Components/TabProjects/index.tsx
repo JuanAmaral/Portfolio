@@ -1,14 +1,10 @@
 import React, { Component, useState } from 'react'
 import * as style from './style'
 import Ellenzinha from '../../assets/Ellenzinha.png'
-import Quina from '../../assets/quina.png'
-import Tryedu from '../../assets/Tryedu.png'
-import JogosSorte from '../../assets/JogosSorte.png'
+import Quina from '../../../public/assets/img/quina.png'
+import Tryedu from '../../../public/assets/img/Tryedu.png'
+import JogosSorte from '../../../public/assets/img/JogosSorte.png'
 import Effects from '../../Components/Effects'
-import ellen1 from '../../assets/EllenEffect/ellen1.png'
-import ellen2 from '../../assets/EllenEffect/ellen2.png'
-import ellen3 from '../../assets/EllenEffect/ellen3.png'
-import ellen4 from '../../assets/EllenEffect/ellen4.png'
 export default function TabProjects() {
   const [expand, setExpand] = useState('proj1 | proj2 | proj3 | proj4 | none')
   function Expand(value: string) {

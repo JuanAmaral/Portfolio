@@ -30,3 +30,10 @@ declare interface LoginSucessResponse {
   bonus_time_anim: number
   game_time: number
 }
+declare interface StaticImageData {
+  src: string;
+  height: number;
+  width: number;
+  placeholder?: string;
+}
+

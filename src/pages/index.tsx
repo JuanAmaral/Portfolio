@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Button from '../Components/Button/Button'
 import * as style from '../styles/style'
-import JuanAmaral from '../assets/JuanAmaral.png'
+import JuanAmaral from '../../public/assets/img/JuanAmaral.png'
 
 import Image from 'next/image'
 import router from 'next/router'
@@ -9,6 +8,7 @@ import router from 'next/router'
 import { scroller } from 'react-scroll'
 import TabProjects from '../Components/TabProjects'
 import TabWork from '../Components/TabWork'
+import ImageNext from '../Components/ImageNext'
 
 export default function Home() {
   const [menu, setMenu] = useState('home | work | projects')
@@ -33,7 +33,8 @@ export default function Home() {
   return (
     <style.Container className="home">
       {/* <NavBar /> */}
-      <style.FloatingBar>
+
+      <style.FloatingBarMobile>
         <style.IconHome
           onClick={() => {
             setMenu('home')
@@ -55,35 +56,72 @@ export default function Home() {
           }}
           active={menu == 'projects' ? true : false}
         />
-      </style.FloatingBar>
-      <style.NavBar>
-        <style.ContentTittle>
-          <style.Tittle color="white">Port</style.Tittle>
-          <style.Tittle color="#711aff">folio.</style.Tittle>
-        </style.ContentTittle>
-      </style.NavBar>
+      </style.FloatingBarMobile>
+      <>
+        <style.NavBar>
+          <style.ContentTittle>
+            <style.Tittle color="white">Port</style.Tittle>
+            <style.Tittle color="#711aff">folio.</style.Tittle>
+          </style.ContentTittle>
+          <style.MenuTopLandscape>
+            <style.TextMenuTop
+              onClick={() => {
+                setMenu('home')
+                scrollToSection('home')
+              }}
+            >
+              INICIO
+            </style.TextMenuTop>
+            <style.TextMenuTop
+              onClick={() => {
+                setMenu('work')
+                scrollToSection('work')
+              }}
+            >
+              CONTRATE
+            </style.TextMenuTop>
+            <style.TextMenuTop
+              onClick={() => {
+                setMenu('projects')
+                scrollToSection('projects')
+              }}
+            >
+              TRABALHOS
+            </style.TextMenuTop>
+          </style.MenuTopLandscape>
+        </style.NavBar>
+      </>
+
       <style.ContentBanner>
-        <style.TittleName color="white">Juan Amaral</style.TittleName>-
-        <style.ContainerText>
-          <style.YellowTextBox />
-          <style.NameTittle>Front-end Developer</style.NameTittle>
-        </style.ContainerText>
-        <style.SubTittle>
-          Desenvolvedor de aplicativos web e native
-        </style.SubTittle>
-        <Button style={{ zIndex: 999 }} onClick={openWapp}>
-          Contate-me
-        </Button>
-        <style.ContainerImage>
-          <Image
-            src={JuanAmaral}
-            alt="Picture of the author"
-            width="100%"
-            height="100%"
-            layout="responsive"
-            objectFit="contain"
-          />
-        </style.ContainerImage>
+        <style.ContainerTopBox>
+          <div>
+            <style.TittleName color="white">Juan Amaral</style.TittleName>-
+            <style.ContainerText>
+              <style.YellowTextBox />
+              <style.NameTittle>Front-end Developer</style.NameTittle>
+            </style.ContainerText>
+            <style.TittleNameLandscape color="white">
+              Juan Amaral
+            </style.TittleNameLandscape>
+            <style.SubTittle>
+              Desenvolvedor de aplicativos web e native
+            </style.SubTittle>
+            <style.StyledButton onClick={openWapp}>
+              Contate-me
+            </style.StyledButton>
+            <style.TextCurriculum>Currículo</style.TextCurriculum>
+          </div>
+          <div>
+            <style.ContainerImage>
+              <ImageNext
+                src={JuanAmaral}
+                alt="Juan Amaral Picture"
+                width={'20rem'}
+                height={'20rem'}
+              />
+            </style.ContainerImage>
+          </div>
+        </style.ContainerTopBox>
         <>
           <style.ContainerText className="work">
             <style.YellowTextBox />
