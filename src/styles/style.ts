@@ -57,7 +57,7 @@ export const ContentBanner = styled.div`
 export const ContentTittle = styled.div`
     display:flex;
     flex-direction: row;
-    width: 22%;
+    width: 10rem;
     padding:1rem;
     height: 5rem;
 `;
@@ -82,11 +82,22 @@ export const ContainerText = styled.div`
 `;
 
 export const ContainerImage = styled.div`
+ 
     margin-top: 2rem;
     width: 100%;
-    height: 18rem;
+    
     img {
-    border-radius: 5%;
+        border-radius: 25px;
+    }
+    @media (min-width: 800px) {
+        img {
+            border-radius:  50px;
+        }
+        
+        
+        
+        
+        //margin-top: -6rem;
     }
   
 `;

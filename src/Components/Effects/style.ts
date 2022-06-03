@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled , { css } from 'styled-components'
 import Image from 'next/image'
 
 
@@ -17,34 +17,72 @@ export const  ContainerImages = styled.div<{press:boolean}>`
         color: yellow;
     } */
     
-    /* ${props => props.press ? 'background: red;' : 'background: blue;'} */
-    :hover {
-        margin-left: -8px;
-        transform: scale(0.9);
-        transition-duration: 1s;
-    }
-    :hover .uma {
-        z-index: 5;
-        transform: perspective(500px) rotateY(-40deg) rotateX(40deg) translateY(0rem);
-        transition-duration: 1s;
+    /* ${props => props.press ? `
+    
+    margin-left: -8px;
+    transform: scale(0.9);
+    transition-duration: 1s;
+    
+    ` : 'background: blue;'} */
 
-    }
-    :hover .duas {
-        z-index: 3;
-        transform: perspective(500px) rotateY(-30deg) rotateX(40deg) translateY(-0.5rem) translateX(-1.5rem);
-        transition-duration: 1.2s;
-    }
-     :hover .tres {
-        z-index: 2;
-        transform: perspective(500px) rotateY(-30deg) rotateX(40deg) translateY(-0.5rem) translateX(-1.5rem);
-        transition-duration: 1.6s;
-    }
-    :hover .quatro {
-        z-index: 1;
-        transform: perspective(200px) rotateY(-20deg) rotateX(40deg) translateY(-0.5rem) translateX(-1.5rem);
-        transition-duration: 1.8s;
-        
-    }
+    ${(props) =>
+    props.press
+      ? css`
+    margin-left: -8px;
+    transform: scale(0.9);
+    transition-duration: 1s;
+        .uma {
+            z-index: 5;
+            transform: perspective(500px) rotateY(-40deg) rotateX(40deg) translateY(0rem);
+            transition-duration: 1s;
+        }
+        .duas {
+            z-index: 3;
+            transform: perspective(450px) rotateY(-30deg) rotateX(40deg) translateY(1rem) translateX(-1.5rem);
+            transition-duration: 1.2s;
+        }
+        .tres {
+            z-index: 2;
+            transform: perspective(300px) rotateY(-30deg) rotateX(40deg) translateY(1.7rem) translateX(-1.5rem);
+            transition-duration: 1.6s;
+        }
+        .quatro {
+            z-index: 1;
+            transform: perspective(200px) rotateY(-10deg) rotateX(40deg) translateY(2.2rem) translateX(-1.5rem);
+            transition-duration: 1.8s;
+                
+        }
+
+        `
+      : css`
+        margin-left: 0px;
+        transform: scale(1);
+        transition-duration: 1s;
+            .uma {
+                z-index: 5;
+                transform: perspective(5000px) rotateY(0deg) rotateX(0deg) translateY(0rem);
+                transition-duration: 1s;
+            }
+            .duas {
+                z-index: 3;
+                transform: perspective(5000px) rotateY(0deg) rotateX(0deg) translateY(1.7rem) translateX(0rem);
+                transition-duration: 1.2s;
+            }
+            .tres {
+                z-index: 2;
+                transform: perspective(5000px) rotateY(0deg) rotateX(0deg) translateY(4.1rem) translateX(0rem);
+                transition-duration: 1.6s;
+            }
+            .quatro {
+                z-index: 1;
+                transform: perspective(5000px) rotateY(0deg) rotateX(0deg) translateY(7.2rem) translateX(0rem);
+                transition-duration: 1.8s;
+                    
+            }
+        `}
+
+
+    
     /* :hover .uma {
         z-index: 5;
         transform: perspective(500px) rotateX(30deg) rotateY(-15deg);
@@ -100,7 +138,7 @@ export const Image3 = styled(Image1)`
 export const Image4 = styled(Image1)`
     perspective: 1000px;
     animation: anim1 3s infinite;
-    transform : translateY(-2rem);
+
     
     @keyframes anim1{
         from {

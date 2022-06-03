@@ -117,7 +117,7 @@ export default function Home() {
                 src={JuanAmaral}
                 alt="Juan Amaral Picture"
                 width={'20rem'}
-                height={'20rem'}
+                height={'100%'}
               />
             </style.ContainerImage>
           </div>
