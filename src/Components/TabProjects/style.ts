@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import Image from 'next/image'
-
+import {Reactjs} from  '@styled-icons/remix-line/Reactjs'
+import {Nextdotjs} from  '@styled-icons/simple-icons/Nextdotjs'
+import {Wordpress} from  '@styled-icons/boxicons-logos/Wordpress'
+import {Unity} from  '@styled-icons/simple-icons/Unity'
 
 export const ContainerImages = styled.section`
     display: grid;
@@ -11,11 +14,97 @@ export const ContainerImages = styled.section`
     border-radius: 5%;
     }
 `;
+
+export const BoxInfo = styled.div<{expand? : string}>`
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: ${(props) => props.expand != 'proj2' ? '#261e33' : '#1c1625'};
+    border-radius: 10px;
+    height: 15rem;
+    width: 100%;
+    border-radius: 5%;  
+    border:  1px transparent solid;
+    cursor:pointer;
+    :hover {
+        border:  1px white solid;
+    }
+    
+`;
+export const TextBox = styled.p`
+    color: white;
+    font-size: 1.5rem;
+`;
+
+export const TextBoxInside = styled(TextBox)`
+    font-size: 1.2rem;
+    text-align: center;
+`;
+export const ButtonOpenProject = styled.button`
+    height: 2rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    background: transparent;
+    border: 1px solid transparent;
+    margin: 0;
+    color: #666088;
+    cursor:pointer;
+    color: white;
+    border-bottom: 1px solid #5f1af0;
+    :hover{
+        color: #5f1af0;
+        transition: 1s;
+        border-bottom: 1px solid white;
+    }
+`;
+
+
+export const IconReactjs = styled(Reactjs)`
+    width: 5rem;
+    color: white;
+`;
+
+export const IconNextdotjs = styled(Nextdotjs)`
+    width: 4.5rem;
+    color: white;
+`;
+
+export const IconWordpress = styled(Wordpress)`
+    width: 4.5rem;
+    color: white;
+`;
+
+export const IconUnity = styled(Unity)`
+    width: 4.5rem;
+    color: white;
+`;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export const ContainerExpandProjet = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+   
 `;
 
 //Image
@@ -33,6 +122,17 @@ export const ExpandProjet = styled.div<{expand: boolean}>`
     background: #261e33;
     display : ${props => props.expand?  'flex' :  'none'};
 `;
+
+export const ExpandRow = styled.div`
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+    margin: 0rem;
+    height: 3rem;
+    
+`;
+
 export const TittleProject = styled.h1`
     font-size: 1.8rem;
     color:black;

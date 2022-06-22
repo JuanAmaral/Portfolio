@@ -5,6 +5,9 @@ import {Home} from '@styled-icons/heroicons-solid/Home'
 import {Users} from '@styled-icons/heroicons-solid/Users'
 import{Folders} from '@styled-icons/remix-fill/Folders'
 import Image from 'next/image'
+
+
+
 //divs
 export const Container = styled.div`
     background: #1f1a27;
@@ -20,7 +23,7 @@ export const Container = styled.div`
         height: 350vh;
     }
     @media (min-width: 1024px) {
-        height: 250vh;
+        height: 350vh;
     }
     
     
