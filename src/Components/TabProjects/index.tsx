@@ -24,13 +24,14 @@ import quina4 from '../../../public/assets/img/QuinaEffect/quina4.png'
 
 import ModalProject from '../ModalProject'
 export default function TabProjects() {
-  const [expand, setExpand] = useState('proj1 | proj2 | proj3 | proj4 | none')
+  // const [expand, setExpand] = useState('proj1 | proj2 | proj3 | proj4 | none')
+  const [expand, setExpand] = useState('proj2')
   const [modalProject, setModalProject] = useState(false)
   function Expand(value: string) {
     expand == value ? setExpand('none') : setExpand(value)
   }
   function closeModal() {
-    setExpand('none')
+    //setExpand('none')
     setModalProject(false)
   }
 
@@ -48,12 +49,12 @@ export default function TabProjects() {
           </style.BoxInfo>
         </div> */}
 
-        <div>
-          <style.BoxInfo onClick={() => Expand('proj2')} expand={expand}>
+        {/* <style.BoxInfo onClick={() => Expand('proj2')} expand={expand}>
             <style.IconNextdotjs />
             <style.TextBox>Nextjs</style.TextBox>
-          </style.BoxInfo>
+          </style.BoxInfo> */}
 
+        <style.ConteinerExpand>
           <style.ExpandProjet expand={expand == 'proj2' ? true : false}>
             <style.ExpandRow>
               <style.TextBoxInside>Administrativo</style.TextBoxInside>
@@ -68,8 +69,9 @@ export default function TabProjects() {
               img4={quina4}
             />
           </style.ExpandProjet>
-          {/* {modalProject && <ModalProject closeModal={closeModal} />} */}
-          <style.ExpandProjet expand={expand == 'proj2' ? true : false}>
+        </style.ConteinerExpand>
+        <style.ConteinerExpand>
+          <style.ExpandProjet expand={true}>
             <style.ExpandRow>
               <style.TextBoxInside>Financeiro</style.TextBoxInside>
               <style.ButtonOpenProject onClick={() => setModalProject(true)}>
@@ -83,10 +85,11 @@ export default function TabProjects() {
               img4={quina4}
             />
           </style.ExpandProjet>
-          {/* {modalProject && <ModalProject closeModal={closeModal} />} */}
-          <style.ExpandProjet expand={expand == 'proj2' ? true : false}>
+        </style.ConteinerExpand>
+        <style.ConteinerExpand>
+          <style.ExpandProjet expand={true}>
             <style.ExpandRow>
-              <style.TextBoxInside>Vendas</style.TextBoxInside>
+              <style.TextBoxInside>Venda</style.TextBoxInside>
               <style.ButtonOpenProject onClick={() => setModalProject(true)}>
                 Saiba mais
               </style.ButtonOpenProject>
@@ -98,8 +101,50 @@ export default function TabProjects() {
               img4={quina4}
             />
           </style.ExpandProjet>
-          {modalProject && <ModalProject closeModal={closeModal} />}
-        </div>
+        </style.ConteinerExpand>
+        <style.ConteinerExpand>
+          <style.ExpandProjet expand={true}>
+            <style.ExpandRow>
+              <style.TextBoxInside>TryEdu teentok</style.TextBoxInside>
+              <style.ButtonOpenProject onClick={() => setModalProject(true)}>
+                Saiba mais
+              </style.ButtonOpenProject>
+            </style.ExpandRow>
+            <Effects3DImageTry
+              img1={tryedu1}
+              img2={tryedu2}
+              img3={tryedu3}
+              img4={tryedu4}
+            />
+          </style.ExpandProjet>
+        </style.ConteinerExpand>
+        <style.ConteinerExpand>
+          <style.ExpandProjet expand={true}>
+            <style.ExpandRow>
+              <style.TextBoxInside>Ellen project</style.TextBoxInside>
+              <style.ButtonOpenProject onClick={() => setModalProject(true)}>
+                Saiba mais
+              </style.ButtonOpenProject>
+            </style.ExpandRow>
+            <Effects3DImage
+              img1={ellen1}
+              img2={ellen2}
+              img3={ellen3}
+              img4={ellen4}
+            />
+          </style.ExpandProjet>
+        </style.ConteinerExpand>
+        <style.ConteinerExpand>
+          <style.ExpandProjet expand={true}>
+            <style.ExpandRow>
+              <style.TextBoxInside>Otica loja</style.TextBoxInside>
+              <style.ButtonOpenProject onClick={() => setModalProject(true)}>
+                Saiba mais
+              </style.ButtonOpenProject>
+            </style.ExpandRow>
+          </style.ExpandProjet>
+        </style.ConteinerExpand>
+        {modalProject && <ModalProject closeModal={closeModal} />}
 
         {/* <style.BoxInfo>
           <style.IconWordpress />

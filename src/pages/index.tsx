@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import * as style from '../styles/style'
-import JuanAmaral from '../../public/assets/img/JuanAmaral.png'
+import JuanAmaral2 from '../../public/assets/img/JuanAmaral2.jpg'
+import JuanAmaral3 from '../../public/assets/img/JuanAmaral3.jpg'
+import JuanAmaral4 from '../../public/assets/img/JuanAmaral4.jpg'
 
 import Image from 'next/image'
 import router from 'next/router'
@@ -114,7 +116,7 @@ export default function Home() {
           <div>
             <style.ContainerImage>
               <ImageNext
-                src={JuanAmaral}
+                src={JuanAmaral4}
                 alt="Juan Amaral Picture"
                 width={'20rem'}
                 height={'100%'}

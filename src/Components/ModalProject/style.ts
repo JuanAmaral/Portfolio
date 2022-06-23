@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import {CloseCircleOutline} from '@styled-icons/evaicons-outline/CloseCircleOutline'
-
+import {ArrowIosBackOutline} from '@styled-icons/evaicons-outline/ArrowIosBackOutline'
 
 
 export const Container = styled.div`
-    height: 80vh;
+    
     width: 100%;
     left: 0;
     display:flex;
@@ -21,6 +21,7 @@ export const ContainerInside = styled.div`
     display:flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     gap: 1rem;
     padding: 1rem 0rem 1rem 0rem;
 
@@ -56,4 +57,50 @@ export const IconCloseCircleOutline = styled(CloseCircleOutline)`
     position:absolute;
     cursor: pointer;
 
+`;
+
+export const ContainerMac = styled.div`
+    z-Index: 1;
+    width: 25rem;
+    min-height: 16.5rem;
+    max-height:16.5rem;
+    
+`;
+export const ContainerScreen = styled.div`
+ position: absolute;
+    width: 20rem;
+    top: 9rem;
+    z-Index: 0;
+    img {
+            border-radius:  70px;
+        }
+`;
+export const ContainerIconsLeft = styled.div`
+    display:flex;
+`;
+export const IconArrowIosBackOutline = styled(ArrowIosBackOutline)`
+    width: 5rem;
+    color: white;
+    z-Index: 1;
+`;
+export const IconArrowIosBackOutlinePurple = styled(ArrowIosBackOutline)`
+    width: 5rem;
+    color: #5f1af0;
+    margin-top: 0.4rem;
+    position:absolute;
+`;
+export const IconArrowIosBackOutlinePurpleInvert = styled(IconArrowIosBackOutlinePurple)`
+    transform: scaleX(-1);
+`;
+
+export const IconArrowIosBackOutlineInvert = styled(IconArrowIosBackOutline)`
+   transform: scaleX(-1);
+  
+`;
+export const ContainerSlider = styled.div`
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 `;

@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import { Effects3DImageQuina } from '../Effects3DImageQuina'
 import * as style from './style'
-import quina1 from '../../../public/assets/img/QuinaEffect/quina1.png'
-import quina2 from '../../../public/assets/img/QuinaEffect/quina2.png'
-import quina3 from '../../../public/assets/img/QuinaEffect/quina3.png'
-import quina4 from '../../../public/assets/img/QuinaEffect/quina4.png'
+import Mac from '../../../public/assets/img/Mac.png'
+import QuinaDashboard1 from '../../../public/assets/img/QuinaDashboard/QuinaDashboard1.png'
+import QuinaDashboard2 from '../../../public/assets/img/QuinaDashboard/QuinaDashboard2.png'
+import QuinaDashboard3 from '../../../public/assets/img/QuinaDashboard/QuinaDashboard3.png'
+import QuinaDashboard4 from '../../../public/assets/img/QuinaDashboard/QuinaDashboard4.png'
 
+import ImageNext from '../../Components/ImageNext'
 interface modalType {
   closeModal(): void
 }
@@ -16,14 +18,29 @@ const ModalProject: React.FC<modalType> = ({ closeModal }) => {
       <style.ContainerInside>
         <style.IconCloseCircleOutline onClick={closeModal} />
         <style.Text>Quina painel administrativo</style.Text>
-        <div style={{ width: '90%' }}>
-          <Effects3DImageQuina
-            img1={quina1}
-            img2={quina2}
-            img3={quina3}
-            img4={quina4}
-          />
-        </div>
+        <style.ContainerSlider>
+          <style.ContainerIconsLeft>
+            <style.IconArrowIosBackOutline />
+            <style.IconArrowIosBackOutlinePurple />
+          </style.ContainerIconsLeft>
+
+          <style.ContainerMac>
+            <ImageNext src={Mac} alt="" width={'100%'} height={'100%'} />
+          </style.ContainerMac>
+
+          <style.ContainerScreen>
+            <ImageNext
+              src={QuinaDashboard1}
+              alt=""
+              width={'10rem'}
+              height={'100%'}
+            />
+          </style.ContainerScreen>
+          <style.ContainerIconsLeft>
+            <style.IconArrowIosBackOutlineInvert />
+            <style.IconArrowIosBackOutlinePurpleInvert />
+          </style.ContainerIconsLeft>
+        </style.ContainerSlider>
         <style.TextInside>Projeto adminsitrativo...</style.TextInside>
       </style.ContainerInside>
     </style.Container>

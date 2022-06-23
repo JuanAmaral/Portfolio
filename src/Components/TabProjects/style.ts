@@ -81,25 +81,6 @@ export const IconUnity = styled(Unity)`
     color: white;
 `;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export const ContainerExpandProjet = styled.div`
     justify-content: center;
     align-items: center;
@@ -114,12 +95,18 @@ export const ImageProject = styled(Image)`
 `;
 export const ExpandProjet = styled.div<{expand: boolean}>`
     display:flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    width: 95%;
+    background: #261e33;
+    width: 100%;
     padding: 0.5rem 0rem 0rem 0.5rem ;
     border-radius: 0px 0px 20px 20px;
     margin-top:-1rem;
-    background: #261e33;
+    border-radius: 10px;
+    height: 15rem;
+    width: 100%;
+    border-radius: 5%;  
     display : ${props => props.expand?  'flex' :  'none'};
 `;
 
@@ -180,5 +167,15 @@ export const ButtonLink = styled.button`
     }
     
 }
+`;
+export const ConteinerExpand = styled.div`
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+   
+    @media (max-width: 1024px) {
+        flex-direction: column;
+    }
+
 `;
 
