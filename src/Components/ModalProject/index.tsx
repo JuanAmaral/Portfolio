@@ -1,47 +1,68 @@
-import React, { Component } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Effects3DImageQuina } from '../Effects3DImageQuina'
 import * as style from './style'
 import Mac from '../../../public/assets/img/Mac.png'
-import QuinaDashboard1 from '../../../public/assets/img/QuinaDashboard/QuinaDashboard1.png'
-import QuinaDashboard2 from '../../../public/assets/img/QuinaDashboard/QuinaDashboard2.png'
-import QuinaDashboard3 from '../../../public/assets/img/QuinaDashboard/QuinaDashboard3.png'
-import QuinaDashboard4 from '../../../public/assets/img/QuinaDashboard/QuinaDashboard4.png'
 
+import { Suspense } from 'react'
 import ImageNext from '../../Components/ImageNext'
 interface modalType {
   closeModal(): void
+  imageList: StaticImageData[]
+  tittle: string
+  description: string
 }
 
-const ModalProject: React.FC<modalType> = ({ closeModal }) => {
+const ModalProject: React.FC<modalType> = ({
+  closeModal,
+  imageList,
+  tittle,
+  description,
+}) => {
+  const [imageOrder, setImageOrder] = useState(0)
+
+  function goToNextImage() {
+    imageOrder <= imageList.length - 2
+      ? setImageOrder(imageOrder + 1)
+      : setImageOrder(0)
+  }
+  function goToPreviusImage() {
+    imageOrder >= imageList.length - 3
+      ? setImageOrder(imageOrder - 1)
+      : setImageOrder(3)
+  }
+
   return (
     <style.Container>
       <style.ContainerInside>
         <style.IconCloseCircleOutline onClick={closeModal} />
-        <style.Text>Quina painel administrativo</style.Text>
+        <style.Text>{tittle}</style.Text>
         <style.ContainerSlider>
-          <style.ContainerIconsLeft>
+          <style.ContainerIcons onClick={() => goToPreviusImage()}>
             <style.IconArrowIosBackOutline />
             <style.IconArrowIosBackOutlinePurple />
-          </style.ContainerIconsLeft>
+          </style.ContainerIcons>
+          <style.ContainerImages>
+            <style.ContainerMac>
+              <ImageNext src={Mac} alt="" width={'100%'} height={'100%'} />
+            </style.ContainerMac>
+            <style.ContainerScreen>
+              <Suspense fallback={`Loading...`}>
+                <ImageNext
+                  src={imageList[imageOrder]}
+                  alt=""
+                  width={'100%'}
+                  height={'100%'}
+                />
+              </Suspense>
+            </style.ContainerScreen>
+          </style.ContainerImages>
 
-          <style.ContainerMac>
-            <ImageNext src={Mac} alt="" width={'100%'} height={'100%'} />
-          </style.ContainerMac>
-
-          <style.ContainerScreen>
-            <ImageNext
-              src={QuinaDashboard1}
-              alt=""
-              width={'10rem'}
-              height={'100%'}
-            />
-          </style.ContainerScreen>
-          <style.ContainerIconsLeft>
+          <style.ContainerIcons onClick={() => goToNextImage()}>
             <style.IconArrowIosBackOutlineInvert />
             <style.IconArrowIosBackOutlinePurpleInvert />
-          </style.ContainerIconsLeft>
+          </style.ContainerIcons>
         </style.ContainerSlider>
-        <style.TextInside>Projeto adminsitrativo...</style.TextInside>
+        <style.TextInside>{description}</style.TextInside>
       </style.ContainerInside>
     </style.Container>
   )

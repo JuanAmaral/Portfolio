@@ -15,7 +15,7 @@ export const Container = styled.div`
     outline: 2px white solid;
     align-items: center;
     flex-direction: column;
-    margin-top: -20rem;
+    
 `
 export const ContainerInside = styled.div`
     display:flex;
@@ -36,15 +36,17 @@ export const Text = styled.h3`
     margin: 1rem 0rem 1rem 0rem;
 `
 export const TextInside = styled.h3`
+    margin-top: 2rem;
+    text-align: center;
     margin: 4rem;
     font-size: 1.4rem;
     color: white;
-    width: 90%;
+    width: 100%;
     
 `
 export const Box = styled.div`
     width: 100%;
-    color: red;
+    
 `;
 export const IconCloseCircleOutline = styled(CloseCircleOutline)`
     width: 3rem;
@@ -60,23 +62,63 @@ export const IconCloseCircleOutline = styled(CloseCircleOutline)`
 `;
 
 export const ContainerMac = styled.div`
+    position:absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
     z-Index: 1;
-    width: 25rem;
-    min-height: 16.5rem;
-    max-height:16.5rem;
+    width: 60%;
+    min-height: 10rem;
+    max-height: 5rem;
+    min-width: 5rem;
+    max-width: 30rem;
     
 `;
+
+export const ContainerImages = styled.div`
+    width: 50%;
+    min-width: 10rem;
+    min-height: 5rem;
+    max-width: 25rem;
+    max-height: 15rem;
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+`;
 export const ContainerScreen = styled.div`
- position: absolute;
-    width: 20rem;
-    top: 9rem;
+    position: absolute;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 50%;
+    min-height: 5rem;
+    max-height: 10rem;
+    min-width: 3rem;
+    max-width: 24rem;
+    margin-top: -2rem;
     z-Index: 0;
+    @media (min-width: 375px) {
+        margin-top: -0.5rem;
+    }
+    @media (min-width: 425px) {
+        margin-top: -0.5rem;
+    }
+    @media (min-width: 1024px) {
+        margin-top: 5rem;
+    }
     img {
             border-radius:  70px;
         }
+
+    
 `;
-export const ContainerIconsLeft = styled.div`
+export const ContainerIcons = styled.div`
     display:flex;
+    cursor: pointer;
 `;
 export const IconArrowIosBackOutline = styled(ArrowIosBackOutline)`
     width: 5rem;
@@ -103,4 +145,5 @@ export const ContainerSlider = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin-top:5rem;
 `;

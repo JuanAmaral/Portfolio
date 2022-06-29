@@ -96,10 +96,6 @@ export const ContainerImage = styled.div`
         img {
             border-radius:  50px;
         }
-        
-        
-        
-        
         //margin-top: -6rem;
     }
   

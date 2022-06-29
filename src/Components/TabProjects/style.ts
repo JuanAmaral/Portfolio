@@ -39,10 +39,13 @@ export const TextBox = styled.p`
 
 export const TextBoxInside = styled(TextBox)`
     font-size: 1.2rem;
-    text-align: center;
+    width:40%;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
 `;
 export const ButtonOpenProject = styled.button`
-    height: 2rem;
+    width: 40%;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
@@ -85,6 +88,7 @@ export const ContainerExpandProjet = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width:100%;
    
 `;
 
@@ -100,7 +104,7 @@ export const ExpandProjet = styled.div<{expand: boolean}>`
     flex-direction: column;
     background: #261e33;
     width: 100%;
-    padding: 0.5rem 0rem 0rem 0.5rem ;
+    padding: 0.5rem 0rem 0.5rem 0rem ;
     border-radius: 0px 0px 20px 20px;
     margin-top:-1rem;
     border-radius: 10px;
@@ -113,10 +117,10 @@ export const ExpandProjet = styled.div<{expand: boolean}>`
 export const ExpandRow = styled.div`
     display:flex;
     flex-direction: row;
-    align-items:center;
     justify-content: space-between;
-    margin: 0rem;
-    height: 3rem;
+    display: 100%;
+    min-width: 15rem;
+
     
 `;
 
@@ -172,7 +176,7 @@ export const ConteinerExpand = styled.div`
     display:flex;
     flex-direction: row;
     width: 100%;
-   
+   margin-top: 1rem;
     @media (max-width: 1024px) {
         flex-direction: column;
     }

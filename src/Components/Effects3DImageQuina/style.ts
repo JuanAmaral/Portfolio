@@ -13,7 +13,7 @@ export const ContainerGeral = styled.div`
     justify-content: center;
     height: 11.3rem;    
     flex-direction: column;
-    margin-bottom: 3rem;
+    margin: 2rem 0rem 3rem 0rem;
 `;
 export const button = styled.div`
 color: white;

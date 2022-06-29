@@ -42,18 +42,6 @@ export default function TabProjects() {
   return (
     <style.ContainerImages>
       <>
-        {/* <div>
-          <style.BoxInfo onClick={() => Expand('proj1')} expand={expand}>
-            <style.IconReactjs />
-            <style.TextBox>React</style.TextBox>
-          </style.BoxInfo>
-        </div> */}
-
-        {/* <style.BoxInfo onClick={() => Expand('proj2')} expand={expand}>
-            <style.IconNextdotjs />
-            <style.TextBox>Nextjs</style.TextBox>
-          </style.BoxInfo> */}
-
         <style.ConteinerExpand>
           <style.ExpandProjet expand={expand == 'proj2' ? true : false}>
             <style.ExpandRow>
@@ -144,7 +132,21 @@ export default function TabProjects() {
             </style.ExpandRow>
           </style.ExpandProjet>
         </style.ConteinerExpand>
-        {modalProject && <ModalProject closeModal={closeModal} />}
+        {modalProject && (
+          <ModalProject
+            closeModal={closeModal}
+            tittle={'Quina Painel Administrativo'}
+            description={
+              'No painel administrativo você gerencia usuários e várias tabelas, encontrando inlcusão, exclusão, e edição de diversos itens e tabelas. Minha participação foi a criação do contexto de autenticação e criação de 2 das 4 páginas compõe tabelas com CRUD.'
+            }
+            imageList={[
+              require('../../../public/assets/img/QuinaDashboard/QuinaDashboard1.png'),
+              require('../../../public/assets/img/QuinaDashboard/QuinaDashboard2.png'),
+              require('../../../public/assets/img/QuinaDashboard/QuinaDashboard3.png'),
+              require('../../../public/assets/img/QuinaDashboard/QuinaDashboard4.png'),
+            ]}
+          />
+        )}
 
         {/* <style.BoxInfo>
           <style.IconWordpress />
