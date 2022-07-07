@@ -45,7 +45,7 @@ export const TextBoxInside = styled(TextBox)`
     text-align: left;
 `;
 export const ButtonOpenProject = styled.button`
-    width: 40%;
+    width: 45%;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
@@ -85,10 +85,13 @@ export const IconUnity = styled(Unity)`
 `;
 
 export const ContainerExpandProjet = styled.div`
+    display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width:100%;
+    height: 50rem;
+    
    
 `;
 
@@ -97,33 +100,40 @@ export const ImageProject = styled(Image)`
     width:100%;
     object-fit:'contain';
 `;
-export const ExpandProjet = styled.div<{expand: boolean}>`
+export const ExpandProjet = styled.div`
     display:flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
     background: #261e33;
     width: 100%;
     padding: 0.5rem 0rem 0.5rem 0rem ;
     border-radius: 0px 0px 20px 20px;
-    margin-top:-1rem;
+    margin:0rem 0rem;
     border-radius: 10px;
-    height: 15rem;
-    width: 100%;
+    height: 12rem;
     border-radius: 5%;  
-    display : ${props => props.expand?  'flex' :  'none'};
+    
 `;
 
 export const ExpandRow = styled.div`
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    display: 100%;
-    min-width: 15rem;
-
+    width: 90%;
+`;
+export const ContainerImagesNext = styled.div`
+    width:90%;
+    
+    img{
+        border-radius: 20px;
+        @media (min-width: 1024px) {
+            border-radius: 10px;
+        }
+        
+    }
     
 `;
-
 export const TittleProject = styled.h1`
     font-size: 1.8rem;
     color:black;
@@ -169,14 +179,13 @@ export const ButtonLink = styled.button`
     100% {
         background-position-y: -480px;
     }
-    
 }
 `;
 export const ConteinerExpand = styled.div`
     display:flex;
     flex-direction: row;
     width: 100%;
-   margin-top: 1rem;
+    margin-top: 1rem;
     @media (max-width: 1024px) {
         flex-direction: column;
     }

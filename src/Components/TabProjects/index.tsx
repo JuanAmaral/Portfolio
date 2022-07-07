@@ -7,137 +7,169 @@ import { Effects3DImage } from '../Effects3DImage'
 import { Effects3DImageTry } from '../Effects3DImageTry'
 import { Effects3DImageQuina } from '../Effects3DImageQuina'
 
-import ellen1 from '../../../public/assets/img/EllenEffect/ellen1.png'
-import ellen2 from '../../../public/assets/img/EllenEffect/ellen2.png'
-import ellen3 from '../../../public/assets/img/EllenEffect/ellen3.png'
-import ellen4 from '../../../public/assets/img/EllenEffect/ellen4.png'
-
-import tryedu1 from '../../../public/assets/img/TryEduEffect/tryedu1.png'
-import tryedu2 from '../../../public/assets/img/TryEduEffect/tryedu2.png'
-import tryedu3 from '../../../public/assets/img/TryEduEffect/tryedu3.png'
-import tryedu4 from '../../../public/assets/img/TryEduEffect/tryedu4.png'
-
-import quina1 from '../../../public/assets/img/QuinaEffect/quina1.png'
-import quina2 from '../../../public/assets/img/QuinaEffect/quina2.png'
-import quina3 from '../../../public/assets/img/QuinaEffect/quina3.png'
-import quina4 from '../../../public/assets/img/QuinaEffect/quina4.png'
-
+import ImageNext from '../ImageNext'
 import ModalProject from '../ModalProject'
+import Image, { ImageProps } from 'next/image'
+import quina from '../../../public/assets/img/QuinaDashboard/QuinaDashboard1.png'
+import quina2 from '../../../public/assets/img/QuinaDashboard/QuinaDashboard2.png'
+import quina3 from '../../../public/assets/img/QuinaDashboard/QuinaDashboard3.png'
+import tryedu from '../../../public/assets/img/TryEdu/tryedupsd.png'
+import hub from '../../../public/assets/img/Hub/hub.png'
+
+import ellenzinha from '../../../public/assets/img/EllenEffect/ellenzinha.png'
+import otica from '../../../public/assets/img/Otica/Otica1.png'
 export default function TabProjects() {
-  // const [expand, setExpand] = useState('proj1 | proj2 | proj3 | proj4 | none')
-  const [expand, setExpand] = useState('proj2')
+  const [expand, setExpand] = useState('proj1 | proj2 | proj3 | proj4 | none')
+  // const [expand, setExpand] = useState('proj2')
   const [modalProject, setModalProject] = useState(false)
   function Expand(value: string) {
     expand == value ? setExpand('none') : setExpand(value)
   }
   function closeModal() {
     //setExpand('none')
-    setModalProject(false)
+    setExpand('none')
   }
 
   useEffect(() => {
-    setExpand('proj2')
+    setExpand('none')
   }, [])
 
   return (
     <style.ContainerImages>
       <>
-        <style.ConteinerExpand>
-          <style.ExpandProjet expand={expand == 'proj2' ? true : false}>
-            <style.ExpandRow>
-              <style.TextBoxInside>Administrativo</style.TextBoxInside>
-              <style.ButtonOpenProject onClick={() => setModalProject(true)}>
-                Saiba mais
-              </style.ButtonOpenProject>
-            </style.ExpandRow>
-            <Effects3DImageQuina
-              img1={quina1}
-              img2={quina2}
-              img3={quina3}
-              img4={quina4}
+        <style.ExpandProjet>
+          <style.ExpandRow>
+            <style.TextBoxInside>Administrativo</style.TextBoxInside>
+            <style.ButtonOpenProject onClick={() => setExpand('proj1')}>
+              Saiba mais
+            </style.ButtonOpenProject>
+          </style.ExpandRow>
+          <style.ContainerImagesNext>
+            <Image
+              src={quina}
+              width={100}
+              height={60}
+              alt={'Administrativo'}
+              objectFit="contain"
+              layout="responsive"
             />
-          </style.ExpandProjet>
-        </style.ConteinerExpand>
-        <style.ConteinerExpand>
-          <style.ExpandProjet expand={true}>
-            <style.ExpandRow>
-              <style.TextBoxInside>Financeiro</style.TextBoxInside>
-              <style.ButtonOpenProject onClick={() => setModalProject(true)}>
-                Saiba mais
-              </style.ButtonOpenProject>
-            </style.ExpandRow>
-            <Effects3DImageQuina
-              img1={quina1}
-              img2={quina2}
-              img3={quina3}
-              img4={quina4}
+          </style.ContainerImagesNext>
+        </style.ExpandProjet>
+        <style.ExpandProjet>
+          <style.ExpandRow>
+            <style.TextBoxInside>Financeiro</style.TextBoxInside>
+            <style.ButtonOpenProject onClick={() => setExpand('proj2')}>
+              Saiba mais
+            </style.ButtonOpenProject>
+          </style.ExpandRow>
+          <style.ContainerImagesNext>
+            <Image
+              src={quina2}
+              width={100}
+              height={60}
+              alt={'Financeiro'}
+              objectFit="contain"
+              layout="responsive"
             />
-          </style.ExpandProjet>
-        </style.ConteinerExpand>
-        <style.ConteinerExpand>
-          <style.ExpandProjet expand={true}>
-            <style.ExpandRow>
-              <style.TextBoxInside>Venda</style.TextBoxInside>
-              <style.ButtonOpenProject onClick={() => setModalProject(true)}>
-                Saiba mais
-              </style.ButtonOpenProject>
-            </style.ExpandRow>
-            <Effects3DImageQuina
-              img1={quina1}
-              img2={quina2}
-              img3={quina3}
-              img4={quina4}
+          </style.ContainerImagesNext>
+        </style.ExpandProjet>
+        <style.ExpandProjet>
+          <style.ExpandRow>
+            <style.TextBoxInside>Vendas</style.TextBoxInside>
+            <style.ButtonOpenProject onClick={() => setExpand('proj3')}>
+              Saiba mais
+            </style.ButtonOpenProject>
+          </style.ExpandRow>
+          <style.ContainerImagesNext>
+            <Image
+              src={quina3}
+              width={100}
+              height={60}
+              alt={'Administrativo'}
+              objectFit="contain"
+              layout="responsive"
             />
-          </style.ExpandProjet>
-        </style.ConteinerExpand>
-        <style.ConteinerExpand>
-          <style.ExpandProjet expand={true}>
-            <style.ExpandRow>
-              <style.TextBoxInside>TryEdu teentok</style.TextBoxInside>
-              <style.ButtonOpenProject onClick={() => setModalProject(true)}>
-                Saiba mais
-              </style.ButtonOpenProject>
-            </style.ExpandRow>
-            <Effects3DImageTry
-              img1={tryedu1}
-              img2={tryedu2}
-              img3={tryedu3}
-              img4={tryedu4}
+          </style.ContainerImagesNext>
+        </style.ExpandProjet>
+        <style.ExpandProjet>
+          <style.ExpandRow>
+            <style.TextBoxInside>TryEdu</style.TextBoxInside>
+            <style.ButtonOpenProject onClick={() => setExpand('proj4')}>
+              Saiba mais
+            </style.ButtonOpenProject>
+          </style.ExpandRow>
+          <style.ContainerImagesNext>
+            <Image
+              src={tryedu}
+              width={100}
+              height={60}
+              alt={'Administrativo'}
+              objectFit="contain"
+              layout="responsive"
             />
-          </style.ExpandProjet>
-        </style.ConteinerExpand>
-        <style.ConteinerExpand>
-          <style.ExpandProjet expand={true}>
-            <style.ExpandRow>
-              <style.TextBoxInside>Ellen project</style.TextBoxInside>
-              <style.ButtonOpenProject onClick={() => setModalProject(true)}>
-                Saiba mais
-              </style.ButtonOpenProject>
-            </style.ExpandRow>
-            <Effects3DImage
-              img1={ellen1}
-              img2={ellen2}
-              img3={ellen3}
-              img4={ellen4}
+          </style.ContainerImagesNext>
+        </style.ExpandProjet>
+        <style.ExpandProjet>
+          <style.ExpandRow>
+            <style.TextBoxInside>Ellenzinha</style.TextBoxInside>
+            <style.ButtonOpenProject onClick={() => setExpand('proj5')}>
+              Saiba mais
+            </style.ButtonOpenProject>
+          </style.ExpandRow>
+          <style.ContainerImagesNext>
+            <Image
+              src={ellenzinha}
+              width={100}
+              height={60}
+              alt={'Ellenzinha'}
+              objectFit="contain"
+              layout="responsive"
             />
-          </style.ExpandProjet>
-        </style.ConteinerExpand>
-        <style.ConteinerExpand>
-          <style.ExpandProjet expand={true}>
-            <style.ExpandRow>
-              <style.TextBoxInside>Otica loja</style.TextBoxInside>
-              <style.ButtonOpenProject onClick={() => setModalProject(true)}>
-                Saiba mais
-              </style.ButtonOpenProject>
-            </style.ExpandRow>
-          </style.ExpandProjet>
-        </style.ConteinerExpand>
-        {modalProject && (
+          </style.ContainerImagesNext>
+        </style.ExpandProjet>
+        <style.ExpandProjet>
+          <style.ExpandRow>
+            <style.TextBoxInside>Hub</style.TextBoxInside>
+            <style.ButtonOpenProject onClick={() => setExpand('proj6')}>
+              Saiba mais
+            </style.ButtonOpenProject>
+          </style.ExpandRow>
+          <style.ContainerImagesNext>
+            <Image
+              src={hub}
+              width={100}
+              height={60}
+              alt={'Hub'}
+              objectFit="contain"
+              layout="responsive"
+            />
+          </style.ContainerImagesNext>
+        </style.ExpandProjet>
+        <style.ExpandProjet>
+          <style.ExpandRow>
+            <style.TextBoxInside>Ótica</style.TextBoxInside>
+            <style.ButtonOpenProject onClick={() => setExpand('proj7')}>
+              Saiba mais
+            </style.ButtonOpenProject>
+          </style.ExpandRow>
+          <style.ContainerImagesNext>
+            <Image
+              src={otica}
+              width={100}
+              height={60}
+              alt={'Otica'}
+              objectFit="contain"
+              layout="responsive"
+            />
+          </style.ContainerImagesNext>
+        </style.ExpandProjet>
+
+        {expand == 'proj1' && (
           <ModalProject
             closeModal={closeModal}
             tittle={'Quina Painel Administrativo'}
             description={
-              'No painel administrativo você gerencia usuários e várias tabelas, encontrando inlcusão, exclusão, e edição de diversos itens e tabelas. Minha participação foi a criação do contexto de autenticação e criação de 2 das 4 páginas compõe tabelas com CRUD.'
+              'No painel sistema você gerencia usuários, inclusão, exclusão, e edição de diversos itens e tabelas. Minha participação foi a criação do contexto de autenticação e criação de 2 das 4 páginas compõe o sistema com CRUD (front-end).'
             }
             imageList={[
               require('../../../public/assets/img/QuinaDashboard/QuinaDashboard1.png'),
@@ -145,104 +177,106 @@ export default function TabProjects() {
               require('../../../public/assets/img/QuinaDashboard/QuinaDashboard3.png'),
               require('../../../public/assets/img/QuinaDashboard/QuinaDashboard4.png'),
             ]}
+            displayPhone={false}
           />
         )}
-
-        {/* <style.BoxInfo>
-          <style.IconWordpress />
-          <style.TextBox>Wordpress</style.TextBox>
-        </style.BoxInfo>
-        <style.BoxInfo>
-          <style.IconUnity />
-          <style.TextBox>Unity</style.TextBox>
-        </style.BoxInfo> */}
-
-        {/* <style.ContainerExpandProjet onClick={() => Expand('proj1')}>
-          <Effects3DImage
-            img1={ellen1}
-            img2={ellen2}
-            img3={ellen3}
-            img4={ellen4}
+        {expand == 'proj2' && (
+          <ModalProject
+            closeModal={closeModal}
+            tittle={'Quina Painel Financeiro'}
+            description={
+              'Neste sistema financeiro você pode visualizar os relatórios diários, semanais, mensais e também pesquisar dados por datas personalizadas visualizando diferentes relatórios utilizando filtros. Participei criando página inicial e alimentando os gráficos (front-end).'
+            }
+            imageList={[
+              require('../../../public/assets/img/QuinaFinanceiro/QuinaFinanceiro1.png'),
+              require('../../../public/assets/img/QuinaFinanceiro/QuinaFinanceiro2.png'),
+              require('../../../public/assets/img/QuinaFinanceiro/QuinaFinanceiro3.png'),
+              require('../../../public/assets/img/QuinaFinanceiro/QuinaFinanceiro4.png'),
+            ]}
+            displayPhone={true}
           />
-          <style.ExpandProjet expand={expand == 'proj1' ? true : false}>
-            <style.TittleProject>Ellen project</style.TittleProject>
-            <style.TextProject>
-              Ellenzinha é um jogo de plataforma 2D de aventura e nele você pode
-              ajudar a ellen a salvar os animais e desbrenvar um mundo mágico,
-              você pode conferi-lo aqui:
-            </style.TextProject>
-            <style.ButtonLink
-              onClick={() => window.open('https://jogo.juanamaral.com.br/')}
-            >
-              Jogar navegador
-            </style.ButtonLink>
-            <style.ButtonLink
-              onClick={() =>
-                window.open(
-                  'https://play.google.com/store/apps/details?id=com.juanamaral.ellenzinha'
-                )
-              }
-            >
-              Acessar PlayStore
-            </style.ButtonLink>
-          </style.ExpandProjet>
-        </style.ContainerExpandProjet>
-      </>
-      <>
-        <style.ContainerExpandProjet onClick={() => Expand('proj2')}>
-          {' '}
-          <Effects3DImageTry
-            expand={expand == 'proj2' ? true : false}
-            img1={tryedu1}
-            img2={tryedu2}
-            img3={tryedu3}
-            img4={tryedu4}
+        )}
+        {expand == 'proj3' && (
+          <ModalProject
+            closeModal={closeModal}
+            tittle={'Quina Ponto de venda'}
+            description={
+              'Esse sistema de venda é integrado com máquinas de cartão, possibilitando o usuário a realizar a venda e imprimindo seu comprovante. Paricipei realizando a exclusão, alimentação dos bilhetes e mudança de tema (front-end).'
+            }
+            imageList={[
+              require('../../../public/assets/img/QuinaPontoVenda/QuinaPontoVenda1.png'),
+              require('../../../public/assets/img/QuinaPontoVenda/QuinaPontoVenda2.png'),
+              require('../../../public/assets/img/QuinaPontoVenda/QuinaPontoVenda3.png'),
+              require('../../../public/assets/img/QuinaPontoVenda/QuinaPontoVenda4.png'),
+            ]}
+            displayPhone={true}
           />
-          <style.ExpandProjet expand={expand == 'proj2' ? true : false}>
-            <style.TittleProject>Try Edu</style.TittleProject>
-            <style.TextProject>
-              Acompanhe, crie relatórios e atividade para seus alunos, gerencie
-              turmas com essa extensão de sala de aula, confira:
-            </style.TextProject>
-            <style.ButtonLink
-              onClick={() => window.open('https://teentok.com.br/')}
-            >
-              Acessar navegador
-            </style.ButtonLink>
-            <style.ButtonLink
-              onClick={() =>
-                window.open(
-                  'https://play.google.com/store/apps/details?id=com.tryedu.AppTryEduAndroid&hl=pt_BR&gl=US'
-                )
-              }
-            >
-              Acessar PlayStore
-            </style.ButtonLink>
-          </style.ExpandProjet>
-        </style.ContainerExpandProjet>
-      </>
-      <>
-        <style.ContainerExpandProjet onClick={() => Expand('proj3')}>
-          {' '}
-          <Effects3DImageQuina
-            img1={quina1}
-            img2={quina2}
-            img3={quina3}
-            img4={quina4}
+        )}
+        {expand == 'proj4' && (
+          <ModalProject
+            closeModal={closeModal}
+            tittle={'TryEdu'}
+            description={
+              'Essa é a ferramenta que possibilita a criançla aprender de forma gamificado e seu professor acompanhar todos os relatórios hiper detalhados. Contribuí com quase todas as páginas do sistema, diretamente e indiretamente (front-end).'
+            }
+            imageList={[
+              require('../../../public/assets/img/TryEdu/TryEdu1.png'),
+              require('../../../public/assets/img/TryEdu/TryEdu2.png'),
+              require('../../../public/assets/img/TryEdu/TryEdu3.png'),
+              require('../../../public/assets/img/TryEdu/TryEdu4.png'),
+            ]}
+            displayPhone={true}
           />
-          <style.ExpandProjet expand={expand == 'proj3' ? true : false}>
-            <style.TittleProject>Quina</style.TittleProject>
-            <style.TextProject>
-              Um projeto empresarial com 3 sistemas de jogos da corrida de
-              cavalado, cambistas vendiam jogos com cartao na primeira
-              plataforma, em seguida temos o gerenciador da corrida onde
-              cadastrava os cavalos no evento e por ultimo um preciso relatório
-              financeiro com gráficos.
-            </style.TextProject>
-          </style.ExpandProjet>
-        </style.ContainerExpandProjet> */}
+        )}
+        {expand == 'proj5' && (
+          <ModalProject
+            closeModal={closeModal}
+            tittle={'Ellenzinha'}
+            description={
+              'Jogo de plataforma 2D com uma bela história cheio de referências da minha vida compartilhada com uma das pessoas que mais amo. Criação de todo o jogo (menos criação de áudio/algumas imagens)'
+            }
+            imageList={[
+              require('../../../public/assets/img/EllenEffect/ellenzinha.png'),
+              require('../../../public/assets/img/EllenEffect/ellenzinha.png'),
+              require('../../../public/assets/img/EllenEffect/ellenzinha.png'),
+              require('../../../public/assets/img/EllenEffect/ellenzinha.png'),
+            ]}
+            displayPhone={false}
+          />
+        )}
+        {expand == 'proj6' && (
+          <ModalProject
+            closeModal={closeModal}
+            tittle={'HUB Gerenciador'}
+            description={
+              'Hub é um gerenciador de servidores onde possui relatórios diários, semanais, mensais e também com datas personalizadas financeiros e técnicos. Contribui em todo o sistema fron-end. '
+            }
+            imageList={[
+              require('../../../public/assets/img/Hub/Hub1.png'),
+              require('../../../public/assets/img/Hub/Hub2.png'),
+              require('../../../public/assets/img/Hub/Hub3.png'),
+              require('../../../public/assets/img/Hub/Hub4.png'),
+            ]}
+            displayPhone={true}
+          />
+        )}
+        {expand == 'proj7' && (
+          <ModalProject
+            closeModal={closeModal}
+            tittle={'Ótica web commerce'}
+            description={
+              'E-Commerce desenvolvido em wordpress para cliente com necessidade de edição simplificada. Participei da criação de todo o front-end do projeto.'
+            }
+            imageList={[
+              require('../../../public/assets/img/Otica/Otica1.png'),
+              require('../../../public/assets/img/Otica/Otica2.png'),
+              require('../../../public/assets/img/Otica/Otica3.png'),
+              require('../../../public/assets/img/Otica/Otica4.png'),
+            ]}
+            displayPhone={false}
+          />
+        )}
       </>
-      {/* <style.ImageProject src={JogosSorte} layout={'responsive'} /> */}
     </style.ContainerImages>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import * as style from '../styles/style'
-import JuanAmaral from '../../public/assets/img/JuanAmaral.jpg'
+import JuanAmaral from '../../public/assets/img/JuanAmaral7.png'
 
 import Image from 'next/image'
 import router from 'next/router'
@@ -16,6 +16,11 @@ export default function Home() {
     const phoneNumber = 62992911658
     window.open(
       `https://api.whatsapp.com/send?phone=55${phoneNumber}&text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20seu%20site%20e%20quero%20criar%20um%20app%2Fsite.%20`
+    )
+  }
+  const openCurriculo = () => {
+    window.open(
+      `https://drive.google.com/file/d/1qYt69sdLRuwiMxxQI_5tKCYe9fp1PEqH/view?usp=sharing/export?format=pdf`
     )
   }
   const scrollToSection = (className: string) => {
@@ -109,7 +114,9 @@ export default function Home() {
             <style.StyledButton onClick={openWapp}>
               Contate-me
             </style.StyledButton>
-            <style.TextCurriculum>Currículo</style.TextCurriculum>
+            <style.TextCurriculum onClick={openCurriculo}>
+              Currículo
+            </style.TextCurriculum>
           </div>
           <div>
             <style.ContainerImage>

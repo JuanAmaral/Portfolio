@@ -11,19 +11,19 @@ export const ContainerGeral = styled.div`
     display:flex;
     align-items: center;
     justify-content: center;
-    height: 11.3rem;    
+    height: 100%; 
     flex-direction: column;
 `;
 export const button = styled.div`
-color: white;
-width: 60%;
-position:relative;
-top: 6rem;
-text-align:center;
-font-size: 1.5rem;
-background: #261e33;
-border-radius: 5px;
-cursor: pointer;
+    color: white;
+    width: 60%;
+    position:relative;
+    top: 6rem;
+    text-align:center;
+    font-size: 1.5rem;
+    background: #261e33;
+    border-radius: 5px;
+    cursor: pointer;
 `;
 
 export const Picture = styled.div `
